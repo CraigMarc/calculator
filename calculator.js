@@ -39,6 +39,8 @@ number.forEach((button) => {
 let value = button.value
 console.log(value)
 
+const display = document.querySelector('#display-container');
+display.textContent = value;
     })
 })
 
