@@ -41,3 +41,14 @@ console.log(value)
 
     })
 })
+
+const operator = document.querySelectorAll('#operator');
+
+operator.forEach((button) => {
+
+    button.addEventListener('click', () => {
+let value = button.value
+console.log(value)
+
+    })
+})
