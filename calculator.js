@@ -49,7 +49,7 @@ operator.forEach((button) => {
 
     button.addEventListener('click', () => {
 let value = button.value
-console.log(value)
+
 /*not working --------
 const display2 = document.querySelector('#display-container2');
 display2.textContent = value;*/
@@ -58,7 +58,30 @@ display2.textContent = value;*/
 })
 let numArr = []
 function display (number) {
+    console.log(number)
+    console.log(numArr[0] == '-')
+    function plusMinus (number) {
+    if (number == 'plusMinus' && numArr.length == 0){
+        numArr.push('-')
+        return numArr
+    }
+    if (number == 'plusMinus' && numArr[0] == '-') {
+        numArr = numArr.slice(1)
+        console.log(numArr)
+        return numArr
+    }
+    if (number == 'plusMinus' && numArr.length > 0) {
+numArr.unshift('-')
+return numArr
+    }
+
+if (numArr != 'plusMinus'){
 numArr.push(number) 
+return numArr
+}
+    }
+    plusMinus(number)
+
 
     const display = document.querySelector('#display-container');
 display.textContent = numArr.join('');
