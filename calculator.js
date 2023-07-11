@@ -58,8 +58,7 @@ display2.textContent = value;*/
 })
 let numArr = []
 function display (number) {
-    console.log(number)
-    console.log(numArr[0] == '-')
+   
     function plusMinus (number) {
     if (number == 'plusMinus' && numArr.length == 0){
         numArr.push('-')
@@ -67,7 +66,6 @@ function display (number) {
     }
     if (number == 'plusMinus' && numArr[0] == '-') {
         numArr = numArr.slice(1)
-        console.log(numArr)
         return numArr
     }
     if (number == 'plusMinus' && numArr.length > 0) {
@@ -80,7 +78,8 @@ numArr.push(number)
 return numArr
 }
     }
-    plusMinus(number)
+
+plusMinus(number)
 
 
     const display = document.querySelector('#display-container');
