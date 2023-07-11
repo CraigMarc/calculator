@@ -94,5 +94,15 @@ display.textContent = numArr.join('');
 let storageArray = []
 function storeNumbers(number1, operator){
 storageArray.push(number1, operator)
-console.log(storageArray)
+
+if (storageArray.length == 4){
+    let operation = storageArray[1]
+    let first = storageArray[0]
+    let second = storageArray[2]
+    console.log(operation)
+    console.log(first)
+    console.log(second)
+    /*
+    operate (operation, first, second)*/
+}
 }
