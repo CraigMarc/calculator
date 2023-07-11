@@ -31,4 +31,13 @@ if (operation == '/') {
 
 }
 
+const number = document.querySelectorAll('#number');
 
+number.forEach((button) => {
+
+    button.addEventListener('click', () => {
+let value = button.value
+console.log(value)
+
+    })
+})
