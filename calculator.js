@@ -38,28 +38,16 @@ number.forEach((button) => {
     button.addEventListener('click', () => {
 let value = button.value
 
+
+
 display(value)
 
     })
 })
 
-const operator = document.querySelectorAll('#operator');
 
-operator.forEach((button) => {
 
-    button.addEventListener('click', () => {
-let value = button.value
-
-/*not working --------
-const display2 = document.querySelector('#display-container2');
-display2.textContent = value;*/
-
-    })
-})
-let numArr = []
-function display (number) {
-   
-    function plusMinus (number) {
+function plusMinus (number) {
     if (number == 'plusMinus' && numArr.length == 0){
         numArr.push('-')
         return numArr
@@ -79,9 +67,32 @@ return numArr
 }
     }
 
+
+let numArr = []
+
+function display (number) {
+    
 plusMinus(number)
+
+let number1 = ""
+let operator = ""
+let numArr2 = []
+let counter = 0
+if (number == '+' || number == '-' || number == '*' || number == '/'){
+number1 = numArr.join('')
+operator = number
+storeNumbers(number1, operator)
+numArr = []
+counter = counter + 1
+
+}
 
 
     const display = document.querySelector('#display-container');
 display.textContent = numArr.join('');
+}
+let storageArray = []
+function storeNumbers(number1, operator){
+storageArray.push(number1, operator)
+console.log(storageArray)
 }
