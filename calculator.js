@@ -87,9 +87,13 @@ counter = counter + 1
 
 }
 
-
+/*
     const display = document.querySelector('#display-container');
 display.textContent = numArr.join('');
+*/
+
+displayResult(numArr.join(''))
+
 }
 let storageArray = []
 function storeNumbers(number1, operator){
@@ -97,12 +101,21 @@ storageArray.push(number1, operator)
 
 if (storageArray.length == 4){
     let operation = storageArray[1]
-    let first = storageArray[0]
-    let second = storageArray[2]
-    console.log(operation)
-    console.log(first)
-    console.log(second)
-    /*
-    operate (operation, first, second)*/
+    let first = Number(storageArray[0].slice(0, storageArray[0].length-1))
+    let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
+
+    let result = operate (operation, first, second)
+    
+   displayResult(result)
+   /*
+   const display = document.querySelector('#display-container2');
+    display.textContent = result*/
 }
+}
+
+function displayResult (result) {
+    console.log(result)
+    const display = document.querySelector('#display-container');
+
+    display.textContent = result
 }
