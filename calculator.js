@@ -79,7 +79,7 @@ plusMinus(number)
 let number1 = ""
 let operator = ""
 
-if (number == '+' || number == '-' || number == '*' || number == '/' || number == '='){
+if (number == '+' || number == '-' || number == '*' || number == '/' || number == '=' || number == 'AC'){
 number1 = numArr.join('')
 operator = number
 storeNumbers(number1, operator)
@@ -99,16 +99,24 @@ displayResult(numArr.join(''))
 function storeNumbers(number1, operator){
 storageArray.push(number1, operator)
 console.log(storageArray)
-if (storageArray.length == 4){
+console.log(storageArray[storageArray.length - 1])
+if (storageArray[length - 1] == 'AC'){
+    storageArray = []
+    const display = document.querySelector('#display2');
+    display.textContent = 0
+    displayResult(0)
+}
+
+if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     let operation = storageArray[1]
     let first = Number(storageArray[0].slice(0, storageArray[0].length-1))
     let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
     let newOperator = storageArray[3]
     let result = operate (operation, first, second)
-    storageArray = []
+    
     storageArray.push(result + '-')
     storageArray.push(newOperator)
-   displayResult(result)
+   
    
    const display = document.querySelector('#display2');
     display.textContent = result
