@@ -98,8 +98,7 @@ displayResult(numArr.join(''))
 
 function storeNumbers(number1, operator){
 storageArray.push(number1, operator)
-console.log(storageArray)
-console.log(storageArray[storageArray.length - 1] == "AC") 
+ 
 
 
 
@@ -120,7 +119,7 @@ if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
 
 }
 if (storageArray[storageArray.length - 1] == 'AC'){
-    console.log('hi')
+    
      storageArray = []
      displayResult(0)
      const display = document.querySelector('#display2');
