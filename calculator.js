@@ -107,15 +107,15 @@ if (storageArray.length == 4){
     let result = operate (operation, first, second)
     
    displayResult(result)
-   /*
-   const display = document.querySelector('#display-container2');
-    display.textContent = result*/
+   
+   const display = document.querySelector('#display2');
+    display.textContent = result
 }
 }
 
 function displayResult (result) {
-    console.log(result)
-    const display = document.querySelector('#display-container');
+    
+    const display = document.querySelector('#display');
 
     display.textContent = result
 }

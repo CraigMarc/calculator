@@ -34,6 +34,7 @@ body {
   }
   
   #display-container {
+    border: solid;
     width: 235px;
     height: 50px;
     border: solid;
@@ -50,6 +51,7 @@ body {
   }
   
   #display-container2 {
+    
     width: 250px;
     height: 50px;
     border: solid;
@@ -60,5 +62,11 @@ body {
     
       border-radius: 10px 10px 0px 0px;
     background-color: #41474D;
+  }
+
+  .test {
+    border: solid;
+    height: 200px;
+    width: 300px;
   }
   
