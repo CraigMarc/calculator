@@ -99,12 +99,11 @@ displayResult(numArr.join(''))
 function storeNumbers(number1, operator){
 storageArray.push(number1, operator)
 console.log(storageArray)
-console.log(storageArray[storageArray.length - 1])
-if (storageArray[length - 1] == 'AC'){
-    storageArray = []
-    const display = document.querySelector('#display2');
-    display.textContent = 0
-    displayResult(0)
+console.log(storageArray[storageArray.length - 1] == "AC") 
+
+if (storageArray[storageArray.length - 1] == 'AC'){
+    
+     storageArray = []
 }
 
 if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
@@ -113,19 +112,20 @@ if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
     let newOperator = storageArray[3]
     let result = operate (operation, first, second)
-    
+    console.log(result)
     storageArray.push(result + '-')
     storageArray.push(newOperator)
-   
-   
+   displayResult(result)
+   /*
    const display = document.querySelector('#display2');
-    display.textContent = result
+    display.textContent = result*/
+
 }
 }
 
-function displayResult (result) {
+function displayResult (number) {
     
     const display = document.querySelector('#display');
 
-    display.textContent = result
+    display.textContent = number
 }

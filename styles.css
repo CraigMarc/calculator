@@ -25,11 +25,11 @@ body {
       background-color: #41474D;
   }
   
-  #clear {
+  [value='AC'] {
     width: 120px;
   }
   
-  .equals {
+  [value='='] {
     width: 120px;
   }
   
