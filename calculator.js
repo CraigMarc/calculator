@@ -101,10 +101,7 @@ storageArray.push(number1, operator)
 console.log(storageArray)
 console.log(storageArray[storageArray.length - 1] == "AC") 
 
-if (storageArray[storageArray.length - 1] == 'AC'){
-    
-     storageArray = []
-}
+
 
 if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     let operation = storageArray[1]
@@ -122,6 +119,16 @@ if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     display.textContent = result
 
 }
+if (storageArray[storageArray.length - 1] == 'AC'){
+    console.log('hi')
+     storageArray = []
+     displayResult(0)
+     const display = document.querySelector('#display2');
+    display.textContent = 0
+}
+
+
+
 }
 
 function displayResult (number) {
