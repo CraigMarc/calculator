@@ -1,3 +1,5 @@
+let storageArray = []
+
 function add (first, second){
     return first + second
 }
@@ -76,14 +78,12 @@ plusMinus(number)
 
 let number1 = ""
 let operator = ""
-let numArr2 = []
-let counter = 0
-if (number == '+' || number == '-' || number == '*' || number == '/'){
+
+if (number == '+' || number == '-' || number == '*' || number == '/' || number == '='){
 number1 = numArr.join('')
 operator = number
 storeNumbers(number1, operator)
 numArr = []
-counter = counter + 1
 
 }
 
@@ -95,17 +95,19 @@ display.textContent = numArr.join('');
 displayResult(numArr.join(''))
 
 }
-let storageArray = []
+
 function storeNumbers(number1, operator){
 storageArray.push(number1, operator)
-
+console.log(storageArray)
 if (storageArray.length == 4){
     let operation = storageArray[1]
     let first = Number(storageArray[0].slice(0, storageArray[0].length-1))
     let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
-
+    let newOperator = storageArray[3]
     let result = operate (operation, first, second)
-    
+    storageArray = []
+    storageArray.push(result + '-')
+    storageArray.push(newOperator)
    displayResult(result)
    
    const display = document.querySelector('#display2');
