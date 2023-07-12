@@ -112,13 +112,14 @@ if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
     let newOperator = storageArray[3]
     let result = operate (operation, first, second)
+    storageArray = []
     console.log(result)
     storageArray.push(result + '-')
     storageArray.push(newOperator)
    displayResult(result)
-   /*
+   
    const display = document.querySelector('#display2');
-    display.textContent = result*/
+    display.textContent = result
 
 }
 }
