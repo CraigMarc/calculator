@@ -82,6 +82,7 @@ function display(number) {
     plusMinus(number)
 
 
+
     let number1 = ""
     let operator = ""
 
@@ -94,8 +95,12 @@ function display(number) {
         numArr = []
 
     }
+    if (number == 'AC') {
+        return displayResult('0')
+    }
 
     displayResult(numArr.join(''))
+
 
 }
 
@@ -160,9 +165,9 @@ function storeNumbers(number1, operator) {
 
         storageArray = []
         displayResult('0')
-        const display2 = document.querySelector('#display');
+        const display = document.querySelector('#display');
     
-        display2.textContent = ''
+        display.textContent = ''
 
     }
 
