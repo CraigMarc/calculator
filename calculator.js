@@ -38,6 +38,63 @@ function operate(operation, first, second) {
 
 }
 
+/*keydown event listener*/
+
+document.addEventListener('keydown', function(e) {
+    console.log(e)
+    if (e.code == 'Digit1' || e.code == 'Numpad1') {
+      console.log('1')
+    }
+    if (e.code == 'Digit2' || e.code == 'Numpad2') {
+        console.log('2')
+      }
+      if (e.code == 'Digit3' || e.code == 'Numpad3') {
+        console.log('3')
+      }
+      if (e.code == 'Digit4' || e.code == 'Numpad4') {
+        console.log('4')
+      }
+      if (e.code == 'Digit5' || e.code == 'Numpad5') {
+        console.log('5')
+      }
+      if (e.code == 'Digit6' || e.code == 'Numpad6') {
+        console.log('6')
+      }
+      if (e.code == 'Digit7' || e.code == 'Numpad7') {
+        console.log('7')
+      }
+      if (e.code == 'Digit8' || e.code == 'Numpad8') {
+        console.log('8')
+      }
+      if (e.code == 'Digit9' || e.code == 'Numpad9') {
+        console.log('9')
+      }
+      if (e.code == 'Digit0' || e.code == 'Numpad0') {
+        console.log('0')
+      }
+      if (e.code == 'Minus' || e.code == 'NumpadSubtract') {
+        console.log('-')
+      }
+      if (e.code == 'Slash' || e.code == 'NumpadDivide') {
+        console.log('/')
+      }
+      if (e.code == 'NumpadAdd') {
+        console.log('+')
+      }
+      if (e.code == 'NumpadMultiply') {
+        console.log('*')
+      }
+      if (e.code == 'Enter' || e.code == 'NumpadEnter') {
+        console.log('enter') 
+      }
+      if (e.code == 'Period' || e.code == 'NumpadDecimal') {
+        console.log('decimal') 
+      }
+  
+  });
+
+/*button event listener*/
+
 const number = document.querySelectorAll('#number');
 
 number.forEach((button) => {
@@ -182,3 +239,4 @@ function displayResult(number) {
 
     display2.textContent = number
 }
+
