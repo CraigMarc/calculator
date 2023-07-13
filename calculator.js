@@ -41,54 +41,54 @@ function operate(operation, first, second) {
 /*keydown event listener*/
 
 document.addEventListener('keydown', function(e) {
-    console.log(e)
+   /* console.log(e)*/
     if (e.code == 'Digit1' || e.code == 'Numpad1') {
-      console.log('1')
+      display('1')
     }
     if (e.code == 'Digit2' || e.code == 'Numpad2') {
-        console.log('2')
+        display('2')
       }
       if (e.code == 'Digit3' || e.code == 'Numpad3') {
-        console.log('3')
+        display('3')
       }
       if (e.code == 'Digit4' || e.code == 'Numpad4') {
-        console.log('4')
+        display('4')
       }
       if (e.code == 'Digit5' || e.code == 'Numpad5') {
-        console.log('5')
+        display('5')
       }
       if (e.code == 'Digit6' || e.code == 'Numpad6') {
-        console.log('6')
+        display('6')
       }
       if (e.code == 'Digit7' || e.code == 'Numpad7') {
-        console.log('7')
+        display('7')
       }
       if (e.code == 'Digit8' || e.code == 'Numpad8') {
-        console.log('8')
+        display('8')
       }
       if (e.code == 'Digit9' || e.code == 'Numpad9') {
-        console.log('9')
+        display('9')
       }
       if (e.code == 'Digit0' || e.code == 'Numpad0') {
-        console.log('0')
+        display('0')
       }
       if (e.code == 'Minus' || e.code == 'NumpadSubtract') {
-        console.log('-')
+        display('-')
       }
       if (e.code == 'Slash' || e.code == 'NumpadDivide') {
-        console.log('/')
+        display('/')
       }
       if (e.code == 'NumpadAdd') {
-        console.log('+')
+        display('+')
       }
       if (e.code == 'NumpadMultiply') {
-        console.log('*')
+        display('*')
       }
       if (e.code == 'Enter' || e.code == 'NumpadEnter') {
-        console.log('enter') 
+        display('=') 
       }
       if (e.code == 'Period' || e.code == 'NumpadDecimal') {
-        console.log('decimal') 
+        display('.') 
       }
   
   });
