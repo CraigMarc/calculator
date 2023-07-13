@@ -27,6 +27,11 @@ function operate(operation, first, second) {
         return multiply(first, second)
     }
     if (operation == '/') {
+
+        if (second == 0) {
+            return "Can't divide by zero"
+        }
+
         return divide(first, second)
     }
 
@@ -89,14 +94,11 @@ function display(number) {
 
     }
 
-    /*
-        const display = document.querySelector('#display-container');
-    display.textContent = numArr.join('');
-    */
-
     displayResult(numArr.join(''))
 
 }
+
+
 
 function storeNumbers(number1, operator) {
     let regex = /[*-/+]/
@@ -164,6 +166,7 @@ function storeNumbers(number1, operator) {
 
 
 }
+
 
 function displayResult(number) {
 
