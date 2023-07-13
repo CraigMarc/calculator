@@ -152,16 +152,18 @@ function storeNumbers(number1, operator) {
         storageArray.push(newOperator)
         displayResult(result)
 
-        const display = document.querySelector('#display2');
+        const display = document.querySelector('#display');
         display.textContent = result
 
     }
     if (storageArray[storageArray.length - 1] == 'AC') {
 
         storageArray = []
-        displayResult(0)
-        const display = document.querySelector('#display2');
-        display.textContent = 0
+        displayResult('0')
+        const display2 = document.querySelector('#display2');
+    
+        display2.textContent = '0'
+
     }
 
 
@@ -171,7 +173,7 @@ function storeNumbers(number1, operator) {
 
 function displayResult(number) {
 
-    const display = document.querySelector('#display');
+    const display2 = document.querySelector('#display2');
 
-    display.textContent = number
+    display2.textContent = number
 }
