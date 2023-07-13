@@ -110,13 +110,15 @@ function storeNumbers(number1, operator) {
 
 
     /*check for duplicate operators*/
-    /*
-    let regex = /[*-/+]/
     
-    if (regex.test(storageArray[storageArray.length-1]) == true && regex.test(storageArray[storageArray.length-2]) == true
-       && regex.test(storageArray[storageArray.length-3]) == true){
-        storageArray.splice(storageArray.length - 3, storageArray.length - 2)
-    }*/
+    
+    if (storageArray[storageArray.length-2] == '' 
+    && regex.test(storageArray[storageArray.length-1]) == true ){
+ 
+ storageArray.splice(storageArray.length - 3, storageArray.length - 2)
+}
+   
+    
     console.log(storageArray)
 
     if (storageArray.length == 4 && storageArray[storageArray.length - 1] != 'AC'
