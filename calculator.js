@@ -88,6 +88,7 @@ function display(number) {
     if (number == '+' || number == '-' || number == '*' || number == '/' || number == '=' || number == 'AC') {
         number1 = numArr.join('')
         operator = number
+        
 
         storeNumbers(number1.slice(0, number1.length - 1), operator)
         numArr = []
@@ -101,7 +102,7 @@ function display(number) {
 
 
 function storeNumbers(number1, operator) {
-    let regex = /[*-/+]/
+    let regex = /[+]|[/]|[*][-]/
 
     if (regex.test(number1) == false) {
         storageArray.push(number1)
@@ -109,7 +110,7 @@ function storeNumbers(number1, operator) {
 
     storageArray.push(operator)
 
-
+    console.log(storageArray)
 
     /*check for duplicate operators*/
     
@@ -121,7 +122,7 @@ function storeNumbers(number1, operator) {
 }
    
     
-    console.log(storageArray)
+   
 
     if (storageArray.length == 4 && storageArray[storageArray.length - 1] != 'AC'
         && storageArray[1] == '=')
