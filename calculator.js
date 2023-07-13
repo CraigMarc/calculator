@@ -76,13 +76,15 @@ function display (number) {
     
 plusMinus(number)
 
+
 let number1 = ""
 let operator = ""
 
 if (number == '+' || number == '-' || number == '*' || number == '/' || number == '=' || number == 'AC'){
 number1 = numArr.join('')
 operator = number
-storeNumbers(number1, operator)
+
+storeNumbers(number1.slice(0, number1.length-1), operator)
 numArr = []
 
 }
@@ -97,20 +99,35 @@ displayResult(numArr.join(''))
 }
 
 function storeNumbers(number1, operator){
-storageArray.push(number1, operator)
+    let regex = /[*-/+]/
+
+if (regex.test(number1) == false){
+    storageArray.push(number1)
+}
+
+storageArray.push(operator)
  
 
 
+/*check for duplicate operators*/
+/*
+let regex = /[*-/+]/
+
+if (regex.test(storageArray[storageArray.length-1]) == true && regex.test(storageArray[storageArray.length-2]) == true
+   && regex.test(storageArray[storageArray.length-3]) == true){
+    storageArray.splice(storageArray.length - 3, storageArray.length - 2)
+}*/
+console.log(storageArray)
 
 if (storageArray.length == 4 && storageArray[storageArray.length -1] != 'AC'){
     let operation = storageArray[1]
-    let first = Number(storageArray[0].slice(0, storageArray[0].length-1))
-    let second = Number(storageArray[2].slice(0, storageArray[2].length-1))
+    let first = Number(storageArray[0])
+    let second = Number(storageArray[2])
     let newOperator = storageArray[3]
     let result = operate (operation, first, second)
     storageArray = []
-    console.log(result)
-    storageArray.push(result + '-')
+    
+    storageArray.push(result)
     storageArray.push(newOperator)
    displayResult(result)
    
