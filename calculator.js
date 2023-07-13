@@ -160,9 +160,9 @@ function storeNumbers(number1, operator) {
 
         storageArray = []
         displayResult('0')
-        const display2 = document.querySelector('#display2');
+        const display2 = document.querySelector('#display');
     
-        display2.textContent = '0'
+        display2.textContent = ''
 
     }
 
